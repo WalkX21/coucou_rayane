@@ -1,0 +1,756 @@
+# def fourth_page(page:Page):
+#     page.window_width = 720
+#     page.window_height = 1280
+
+#     def retour_a_page_2(e):
+#         page.clean()
+#         page_2(page)
+    
+    
+
+
+#     retour = FilledButton(text="Submit", width=700, height=100, on_click= retour_a_page_2)
+
+#     # page.add(
+#     #     Container(
+#     #         content=Column([
+#     #             Text(" Voila les info sur contact1 : \n {nama} \n {agex} \n {ph} \n {pos}" .format(nama = new_text_field.value, agex = textField1.value, ph = third_text.value, pos =  fourth_text.value  )),
+#     #             retour,
+#     #         ])
+                        
+#     #         )
+#     #     )
+#     user_info = user_data.get("contact1", {})
+#     nom = user_info.get("nom", "N/A")
+#     age = user_info.get("age", "N/A")
+#     num_tel = user_info.get("num_tel", "N/A")
+#     position = user_info.get("position", "N/A")
+
+#     page.add(
+#         Container(
+#             content=Column([
+#                 Text(" Voici les informations sur contact1 :"),
+#                 Text(f"Nom : {nom}"),
+#                 Text(f"Age : {age}"),
+#                 Text(f"Numéro de téléphone : {num_tel}"),
+#                 Text(f"Position : {position}"),
+#                 retour,
+#             ])
+#         )
+#     )
+
+# def fourth_page(page: Page):
+#     page.window_width = 720
+#     page.window_height = 1280
+
+#     def retour_a_page_2(e):
+#         page.clean()
+#         page_2(page)
+
+#     retour = FilledButton(text="Retour", width=700, height=100, on_click=retour_a_page_2)
+
+#     containers = []  # Liste pour stocker les conteneurs
+
+#     # Parcours du dictionnaire user_data pour chaque utilisateur
+#     for user_key, user_info in user_data.items():
+#         nom = user_info.get("nom", "N/A")
+#         age = user_info.get("age", "N/A")
+#         num_tel = user_info.get("num_tel", "N/A")
+#         position = user_info.get("position", "N/A")
+
+#         user_info_text = Text(f"Informations pour {user_key} :")
+#         nom_text = Text(f"Nom : {nom}")
+#         age_text = Text(f"Age : {age}")
+#         num_tel_text = Text(f"Numéro de téléphone : {num_tel}")
+#         position_text = Text(f"Position : {position}")
+
+#         user_container = Container(
+#             content=Column([
+#                 user_info_text,
+#                 nom_text,
+#                 age_text,
+#                 num_tel_text,
+#                 position_text,
+#                 retour,
+#             ])
+#         )
+
+#         containers.append(user_container)  # Ajouter le conteneur à la liste
+
+#     page.add(containers)  # Ajouter tous les conteneurs à la page en une seule fois
+
+
+# # def fourth_page(page: Page):
+# #     page.window_width = 720
+# #     page.window_height = 1280
+
+# #     def retour_a_page_2(e):
+# #         page.clean()
+# #         page_2(page)
+
+# #     retour = FilledButton(text="Retour", width=700, height=100, on_click=retour_a_page_2)
+
+# #     container = Container(
+# #         content=Column([
+# #             retour,
+# #         ])
+# #     )
+
+# #     # Parcours du dictionnaire user_data pour chaque utilisateur
+# #     for user_key, user_info in user_data.items():
+# #         nom = user_info.get("nom", "N/A")
+# #         age = user_info.get("age", "N/A")
+# #         num_tel = user_info.get("num_tel", "N/A")
+# #         position = user_info.get("position", "N/A")
+
+# #         user_info_text = Text(f"Informations pour {user_key} :")
+# #         nom_text = Text(f"Nom : {nom}")
+# #         age_text = Text(f"Age : {age}")
+# #         num_tel_text = Text(f"Numéro de téléphone : {num_tel}")
+# #         position_text = Text(f"Position : {position}")
+
+# #         user_container = Container(
+# #             content=Column([
+# #                 user_info_text,
+# #                 nom_text,
+# #                 age_text,
+# #                 num_tel_text,
+# #                 position_text,
+# #             ])
+# #         )
+
+# #         # Ajoutez le conteneur de l'utilisateur à la quatrième page
+# #         container.add(user_container)
+
+# #     page.add(container)   
+
+    
+
+
+# flet.app(target=test)
+
+
+# # # # # # import flet
+# # # # # # from flet import Page, AppBar, TextField, Image, FilledButton, Text, colors, Column, Container
+
+
+# # # # # # # Variable pour stocker la page précédente
+# # # # # # previous_page = None
+
+# # # # # # def test(page: Page):
+# # # # # #     page.window_width = 720
+# # # # # #     page.window_height = 1280
+# # # # # #     def btn_clicked(e):
+# # # # # #         page.clean()
+# # # # # #         new_page(page)
+
+# # # # # #     page.appbar = AppBar(title=Text("Coucou Rayane "), bgcolor=colors.CYAN_700, center_title=True)
+# # # # # #     img = Image(
+# # # # # #         src=f"https://img.freepik.com/free-vector/assortment-confident-people-smiling_23-2148411467.jpg?w=2000",
+# # # # # #         fit="contain"
+# # # # # #     )
+
+# # # # # #     global login
+# # # # # #     global password
+# # # # # #     login = TextField(label="Email", hint_text="Email Adresse")
+# # # # # #     btn = FilledButton(text="Login", width=700, height=100, on_click=btn_clicked)
+# # # # # #     password = TextField(label="Passeword", password=True, can_reveal_password=True, hint_text="your password")
+
+# # # # # #     page.add(
+# # # # # #         Container(
+# # # # # #             content=Column([
+# # # # # #                 Text("Que voulez-vous faire ? 1. Ajouter un contact  2. Quitter"),
+# # # # # #                 img,
+# # # # # #                 login,
+# # # # # #                 password, btn
+# # # # # #             ], spacing=20),
+# # # # # #             class_name = "scrollable"
+# # # # # #         )
+# # # # # #     )
+
+# # # # # # def new_page(page: Page):
+# # # # # #     page.window_width = 720
+# # # # # #     page.window_height = 1280
+# # # # # #     def submit_clicked(e):
+# # # # # #         page.clean()
+# # # # # #         third_page(page)
+
+# # # # # #     global new_text_field
+# # # # # #     global textField1
+# # # # # #     new_text_field = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+
+# # # # # #     textField1= TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # # # #     submit_btn = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked)
+
+# # # # # #     # Bouton de retour pour revenir à la page précédente
+# # # # # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # # # # #     # Ajoute les éléments à la nouvelle page
+# # # # #     page.add(
+# # # # #         Container(
+# # # # #             content=Column([
+# # # # #                 Text("Entrez les informations du contact :\n Quel est le nom de contact 1"),
+
+# # # # #                 new_text_field,
+# # # # #                 Text("Quel age a contact 1"),
+# # # # #                 textField1,
+# # # # #                 submit_btn,
+# # # # #                 return_btn  # Bouton de retour
+# # # # #             ], spacing=20)
+# # # # #         )
+# # # # #     )
+
+# # # # # def return_to_previous(e):
+# # # # #     page.clean()
+# # # # #     if previous_page:
+# # # # #         previous_page(page)
+
+# # # # # def third_page(page: Page):
+# # # # #     page.window_width = 720
+# # # # #     page.window_height = 1280
+# # # # #     def submit_clicked2(e):
+# # # # #         page.clean()
+# # # # #         fourth_page(page)
+
+# # # # #     global third_text
+# # # # #     global fourth_text
+# # # # #     third_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # # #     fourth_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # # #     submit_btn2 = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked2)
+    
+# # # # #     # Bouton de retour pour revenir à la page précédente
+# # # # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # # # #     page.add(
+# # # # #         Container(
+# # # # #             content=Column([
+# # # # #                 # Ajoute ici les éléments pour la troisième page
+# # # # #                 Text("quel est le numero de telephone de contact 1 ? avec indicatif regionnal !"),
+# # # # #                 third_text,
+# # # # #                 Text("Quel est la position de contact 1 (ami, pere, mere, soeur ...)"),
+# # # # #                 fourth_text,
+# # # # #                 submit_btn2,
+# # # # #                 return_btn  # Bouton de retour
+# # # # #             ], spacing=20)
+# # # # #         )
+# # # # #     )
+
+# # # # # def fourth_page(page: Page):
+# # # # #     page.window_width = 720
+# # # # #     page.window_height = 1280
+
+# # # # #     page.add(
+# # # # #         Container(
+# # # # #             content=Column([
+# # # # #                 Text(" Voila les info sur contact1 : \n {nama} \n {agex} \n {ph} \n {pos}" .format(nama = new_text_field.value, agex = textField1.value, ph = third_text.value, pos =  fourth_text.value  )),
+# # # # #             ])
+# # # # #         )
+# # # # #     )
+
+# # # # # if __name__ == '__main__':
+# # # # #     flet.app(target=test, style= "style.css")
+
+
+# # # # import flet
+# # # # from flet import Page, AppBar, TextField, Image, FilledButton, Text, colors, Column, Container
+
+# # # # # Crée une pile pour suivre les pages précédentes
+# # # # previous_pages = []
+
+# # # # def test(page: Page):
+# # # #     page.window_width = 720
+# # # #     page.window_height = 1280
+# # # #     def btn_clicked(e):
+# # # #         # Ajoute la page actuelle à la pile
+# # # #         previous_pages.append(page.get_())
+# # # #         page.clean()
+# # # #         new_page(page)
+
+# # # #     page.appbar = AppBar(title=Text("Coucou Rayane "), bgcolor=colors.CYAN_700, center_title=True)
+# # # #     img = Image(
+# # # #         src=f"https://img.freepik.com/free-vector/assortment-confident-people-smiling_23-2148411467.jpg?w=2000",
+# # # #         fit="contain"
+# # # #     )
+
+# # # #     global login
+# # # #     global password
+# # # #     login = TextField(label="Email", hint_text="Email Adresse")
+# # # #     btn = FilledButton(text="Login", width=700, height=100, on_click=btn_clicked)
+# # # #     password = TextField(label="Passeword", password=True, can_reveal_password=True, hint_text="your password")
+
+# # # #     # Ajoute le bouton de retour sur cette page
+# # # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # # #     page.add(
+# # # #         Container(
+# # # #             content=Column([
+# # # #                 Text("Que voulez-vous faire ? 1. Ajouter un contact  2. Quitter"),
+# # # #                 img,
+# # # #                 login,
+# # # #                 password, btn,
+# # # #                 return_btn  # Bouton de retour
+# # # #             ], spacing=20)
+# # # #         )
+# # # #     )
+
+# # # # def new_page(page: Page):
+# # # #     page.window_width = 720
+# # # #     page.window_height = 1280
+# # # #     def submit_clicked(e):
+# # # #         # Ajoute la page actuelle à la pile
+# # # #         previous_pages.append(page.get_content())
+# # # #         page.scroll_to(third_page(page))
+
+# # # #     global new_text_field
+# # # #     global textField1
+# # # #     new_text_field = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+
+# # # #     textField1= TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # #     submit_btn = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked)
+
+# # # #     # Bouton de retour pour revenir à la page précédente
+# # # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # # #     page.add(
+# # # #         Container(
+# # # #             content=Column([
+# # # #                 Text("Entrez les informations du contact :\n Quel est le nom de contact 1"),
+
+# # # #                 new_text_field,
+# # # #                 Text("Quel age a contact 1"),
+# # # #                 textField1,
+# # # #                 submit_btn,
+# # # #                 return_btn  # Bouton de retour
+# # # #             ], spacing=20)
+# # # #         )
+# # # #     )
+
+# # # # def return_to_previous(e):
+# # # #     if previous_pages:
+# # # #         previous_page_content = previous_pages.pop()
+# # # #         page.clean()
+# # # #         page.add(previous_page_content)
+
+# # # # def third_page(page: Page):
+# # # #     page.window_width = 720
+# # # #     page.window_height = 1280
+# # # #     def submit_clicked2(e):
+# # # #         # Ajoute la page actuelle à la pile
+# # # #         previous_pages.append(page.get_content())
+# # # #         page.scroll_to(fourth_page(page))
+
+# # # #     global third_text
+# # # #     global fourth_text
+# # # #     third_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # #     fourth_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # # #     submit_btn2 = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked2)
+
+# # # #     # Bouton de retour pour revenir à la page précédente
+# # # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # # #     page.add(
+# # # #         Container(
+# # # #             content=Column([
+# # # #                 # Ajoute ici les éléments pour la troisième page
+# # # #                 Text("quel est le numero de telephone de contact 1 ? avec indicatif regionnal !"),
+# # # #                 third_text,
+# # # #                 Text("Quel est la position de contact 1 (ami, pere, mere, soeur ...)"),
+# # # #                 fourth_text,
+# # # #                 submit_btn2,
+# # # #                 return_btn  # Bouton de retour
+# # # #             ], spacing=20)
+# # # #         )
+# # # #     )
+
+# # # # def fourth_page(page: Page):
+# # # #     page.window_width = 720
+# # # #     page.window_height = 1280
+
+# # # #     page.add(
+# # # #         Container(
+# # # #             content=Column([
+# # # #                 Text(" Voila les info sur contact1 : \n {nama} \n {agex} \n {ph} \n {pos}" .format(nama = new_text_field.value, agex = textField1.value, ph = third_text.value, pos =  fourth_text.value  )),
+# # # #             ])
+# # # #         )
+# # # #     )
+
+# # # # if __name__ == '__main__':
+# # # #     flet.app(target=test)
+
+
+# # # import flet
+# # # from flet import Page, AppBar, TextField, Image, FilledButton, Text, colors, Column, Container
+
+# # # # Crée une pile pour suivre les pages précédentes
+# # # previous_pages = []
+
+# # # def test(page: Page):
+# # #     page.window_width = 720
+# # #     page.window_height = 1280
+# # #     def btn_clicked(e):
+# # #         # Ajoute la page actuelle à la pile
+# # #         previous_pages.append(test)
+# # #         page.clean()
+# # #         new_page(page)
+
+# # #     page.appbar = AppBar(title=Text("Coucou Rayane "), bgcolor=colors.CYAN_700, center_title=True)
+# # #     img = Image(
+# # #         src=f"https://img.freepik.com/free-vector/assortment-confident-people-smiling_23-2148411467.jpg?w=2000",
+# # #         fit="contain"
+# # #     )
+
+# # #     global login
+# # #     global password
+# # #     login = TextField(label="Email", hint_text="Email Adresse")
+# # #     btn = FilledButton(text="Login", width=700, height=100, on_click=btn_clicked)
+# # #     password = TextField(label="Passeword", password=True, can_reveal_password=True, hint_text="your password")
+
+# # #     # Ajoute le bouton de retour sur cette page
+# # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # #     page.add(
+# # #         Container(
+# # #             content=Column([
+# # #                 Text("Que voulez-vous faire ? 1. Ajouter un contact  2. Quitter"),
+# # #                 img,
+# # #                 login,
+# # #                 password, btn,
+# # #                 return_btn  # Bouton de retour
+# # #             ], spacing=20)
+# # #         )
+# # #     )
+
+# # # def new_page(page: Page):
+# # #     page.window_width = 720
+# # #     page.window_height = 1280
+# # #     def submit_clicked(e):
+# # #         # Ajoute la page actuelle à la pile
+# # #         previous_pages.append(new_page)
+# # #         page.clean()
+# # #         third_page(page)
+
+# # #     global new_text_field
+# # #     global textField1
+# # #     new_text_field = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+
+# # #     textField1= TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # #     submit_btn = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked)
+
+# # #     # Bouton de retour pour revenir à la page précédente
+# # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # #     page.add(
+# # #         Container(
+# # #             content=Column([
+# # #                 Text("Entrez les informations du contact :\n Quel est le nom de contact 1"),
+
+# # #                 new_text_field,
+# # #                 Text("Quel age a contact 1"),
+# # #                 textField1,
+# # #                 submit_btn,
+# # #                 return_btn  # Bouton de retour
+# # #             ], spacing=20)
+# # #         )
+# # #     )
+
+# # # def return_to_previous(e):
+# # #     if previous_pages:
+# # #         previous_page = previous_pages.pop()
+# # #         page.clean()
+# # #         previous_page(page)
+
+# # # def third_page(page: Page):
+# # #     page.window_width = 720
+# # #     page.window_height = 1280
+# # #     def submit_clicked2(e):
+# # #         # Ajoute la page actuelle à la pile
+# # #         previous_pages.append(third_page)
+# # #         page.clean()
+# # #         fourth_page(page)
+
+# # #     global third_text
+# # #     global fourth_text
+# # #     third_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # #     fourth_text = TextField(label="Nouveau champ de texte", hint_text="Entrez quelque chose")
+# # #     submit_btn2 = FilledButton(text="Submit", width=700, height=100, on_click=submit_clicked2)
+
+# # #     # Bouton de retour pour revenir à la page précédente
+# # #     return_btn = FilledButton(text="Retour", width=700, height=100, on_click=return_to_previous)
+
+# # #     page.add(
+# # #         Container(
+# # #             content=Column([
+# # #                 # Ajoute ici les éléments pour la troisième page
+# # #                 Text("quel est le numero de telephone de contact 1 ? avec indicatif regionnal !"),
+# # #                 third_text,
+# # #                 Text("Quel est la position de contact 1 (ami, pere, mere, soeur ...)"),
+# # #                 fourth_text,
+# # #                 submit_btn2,
+# # #                 return_btn  # Bouton de retour
+# # #             ], spacing=20)
+# # #         )
+# # #     )
+
+# # # def fourth_page(page: Page):
+# # #     page.window_width = 720
+# # #     page.window_height = 1280
+
+# # #     page.add(
+# # #         Container(
+# # #             content=Column([
+# # #                 Text(" Voila les info sur contact1 : \n {nama} \n {agex} \n {ph} \n {pos}" .format(nama = new_text_field.value, agex = textField1.value, ph = third_text.value, pos =  fourth_text.value  )),
+# # #             ])
+# # #         )
+# # #     )
+
+# # # if __name__ == '__main__':
+# # #     flet.app(target=test)
+
+
+-------------------------------------------------------------------------------------------
+
+# from kivy.app import App
+# from kivy.uix.boxlayout import BoxLayout
+# from kivy.uix.label import Label
+# from kivy.uix.textinput import TextInput
+# from kivy.uix.button import Button
+
+# class ContactApp(App):
+#     def build(self):
+#         # Crée une boîte de mise en page verticale
+#         layout = BoxLayout(orientation='vertical', spacing=10, padding=20)
+
+#         # Crée et ajoute un label pour le titre
+#         title_label = Label(text="Chingu B-Days")
+#         layout.add_widget(title_label)
+
+#         # Crée et ajoute des champs de texte pour le nom et l'âge
+#         name_input = TextInput(hint_text="Nom")
+#         age_input = TextInput(hint_text="Âge")
+#         layout.add_widget(name_input)
+#         layout.add_widget(age_input)
+
+#         # Crée un bouton pour soumettre les informations
+#         submit_button = Button(text="Soumettre")
+#         submit_button.bind(on_press=self.submit)
+#         layout.add_widget(submit_button)
+
+#         # Crée un label pour afficher les informations soumises
+#         self.result_label = Label()
+#         layout.add_widget(self.result_label)
+
+#         return layout
+
+#     def submit(self, instance):
+#         name = instance.parent.children[2].text.strip()
+#         age = instance.parent.children[3].text.strip()
+
+#         if name and age:
+#             message = f"Joyeux anniversaire, {name} ! Tu as {age} ans !"
+#         else:
+#             message = "Veuillez remplir tous les champs."
+
+#         self.result_label.text = message
+
+# if __name__ == '__main__':
+#     ContactApp().run()
+
+
+# from kivy.app import App
+# from kivy.uix.boxlayout import BoxLayout
+# from kivy.uix.label import Label
+# from kivy.uix.textinput import TextInput
+# from kivy.uix.button import Button
+
+# class ContactApp(App):
+#     def build(self):
+#         self.orientation = 'vertical'
+#         self.spacing = 10
+#         self.padding = 20
+        
+#         self.title_label = Label(text="Chingu B-Days")
+#         self.name_input = TextInput(hint_text="Nom")
+#         self.age_input = TextInput(hint_text="Âge")
+#         self.submit_button = Button(text="Soumettre")
+#         self.result_label = Label()
+
+#         self.submit_button.bind(on_press=self.submit)
+
+#         self.add_widget(self.title_label)
+#         self.add_widget(self.name_input)
+#         self.add_widget(self.age_input)
+#         self.add_widget(self.submit_button)
+#         self.add_widget(self.result_label)
+
+#     def submit(self, instance):
+#         name = self.name_input.text.strip()
+#         age = self.age_input.text.strip()
+
+#         if name and age:
+#             message = f"Joyeux anniversaire, {name} ! Tu as {age} ans !"
+#         else:
+#             message = "Veuillez remplir tous les champs."
+
+#         self.result_label.text = message
+
+# if __name__ == '__main__':
+#     ContactApp().run()
+
+
+# # from kivy.app import App
+# # from kivy.uix.boxlayout import BoxLayout
+# # from kivy.uix.textinput import TextInput
+# # from kivy.uix.button import Button
+# # from kivy.uix.label import Label
+# # from flet import AppBar, Text, colors, Image
+
+# # class LoginPage(BoxLayout):
+# #     def __init__(self, **kwargs):
+# #         super().__init__(**kwargs)
+# #         self.orientation = 'vertical'
+
+# #         self.appbar = AppBar(title=Text("Coucou Rayane "), bgcolor=colors.CYAN_700, center_title=True)
+# #         self.img = Image(
+# #             source="spmn.png",
+# #             fit="contain"
+# #         )
+
+# #         self.login = TextInput(hint_text="Email Adresse")
+# #         self.password = TextInput(password=True, can_reveal_password=True, hint_text="Your Password")
+# #         self.login_button = Button(text="Login")
+# #         self.login_button.bind(on_press=self.login_clicked)
+
+# #         self.add_widget(self.appbar)
+# #         self.add_widget(self.img)
+# #         self.add_widget(self.login)
+# #         self.add_widget(self.password)
+# #         self.add_widget(self.login_button)
+
+# #     def login_clicked(self, instance):
+# #         self.clear_widgets()
+# #         self.add_widget(ContactPage())
+
+# # class ContactPage(BoxLayout):
+# #     def __init__(self, **kwargs):
+# #         super().__init__(**kwargs)
+# #         self.orientation = 'vertical'
+
+# #         self.new_text_field = TextInput(hint_text="Enter Name")
+# #         self.text_field1 = TextInput(hint_text="Enter Age")
+# #         self.submit_btn = Button(text="Submit")
+# #         self.submit_btn.bind(on_press=self.submit_clicked)
+
+# #         self.add_widget(Label(text="Enter contact information:"))
+# #         self.add_widget(self.new_text_field)
+# #         self.add_widget(Label(text="What is contact 1's age?"))
+# #         self.add_widget(self.text_field1)
+# #         self.add_widget(self.submit_btn)
+
+# #     def submit_clicked(self, instance):
+# #         self.clear_widgets()
+# #         self.add_widget(PhoneNumberPage())
+
+# # class PhoneNumberPage(BoxLayout):
+# #     def __init__(self, **kwargs):
+# #         super().__init__(**kwargs)
+# #         self.orientation = 'vertical'
+
+# #         self.third_text = TextInput(hint_text="Enter Phone Number")
+# #         self.fourth_text = TextInput(hint_text="Enter Position (e.g., friend, family)")
+# #         self.submit_btn2 = Button(text="Submit")
+# #         self.submit_btn2.bind(on_press=self.submit_clicked2)
+
+# #         self.add_widget(Label(text="What is contact 1's phone number? (with area code!)"))
+# #         self.add_widget(self.third_text)
+# #         self.add_widget(Label(text="What is contact 1's position (friend, family, etc.)?"))
+# #         self.add_widget(self.fourth_text)
+# #         self.add_widget(self.submit_btn2)
+
+# #     def submit_clicked2(self, instance):
+# #         # self.clear_widgets()
+# #         self.add_widget(ContactInfoPage())
+
+# # class ContactInfoPage(BoxLayout):
+# #     def __init__(self, **kwargs):
+# #         super().__init__(**kwargs)
+# #         self.orientation = 'vertical'
+
+# #         self.add_widget(Label(text="Here is the information for contact 1:"))
+# #         self.add_widget(Label(text=f"Name: {self.new_text_field.text}"))
+# #         self.add_widget(Label(text=f"Age: {self.text_field1.text}"))
+# #         self.add_widget(Label(text=f"Phone Number: {self.third_text.text}"))
+# #         self.add_widget(Label(text=f"Position: {self.fourth_text.text}"))
+
+# # class MyApp(App):
+# #     def build(self):
+# #         return LoginPage()
+
+# # if __name__ == '__main__':
+# #     MyApp().run()
+
+import flet
+from flet import Page, AppBar, TextField, Image, FilledButton, Text, colors, Column, Container
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Liste de contacts (utilisée pour stocker temporairement les contacts)
+contacts = []
+
+def add_contact():
+    data = {
+        "name": name_input.text,
+        "phone_number": phone_input.text,
+        "age": age_input.text,
+        "position": position_input.text,
+        "other_info": other_info_input.text
+    }
+    contacts.append(data)
+    print("Contact ajouté avec succès !")
+
+@app.route('/get_contacts', methods=['GET'])
+def get_contacts():
+    return jsonify(contacts)
+
+@app.route('/add_contact', methods=['POST'])
+def api_add_contact():
+    data = request.json
+    contacts.append(data)
+    return jsonify({"message": "Contact ajouté avec succès !"}), 200
+
+def test(page: Page):
+    page.window_width = 720
+    page.window_height = 1280
+
+    page.appbar = AppBar(title=Text("Coucou Rayane "), bgcolor=colors.CYAN_700, center_title=True)
+    img = Image(
+        src="https://img.freepik.com/free-vector/assortment-confident-people-smiling_23-2148411467.jpg?w=2000",
+        fit="contain"
+    )
+
+    global name_input
+    name_input = TextField(label="Nom", hint_text="Nom du contact")
+    phone_input = TextField(label="Numéro de téléphone", hint_text="Numéro de téléphone")
+    age_input = TextField(label="Âge", hint_text="Âge du contact")
+    position_input = TextField(label="Position dans la famille", hint_text="Position")
+    other_info_input = TextField(label="Autres informations", hint_text="Autres informations")
+
+    btn = FilledButton(text="Ajouter un contact", width=700, height=100, on_click=add_contact)
+
+    page.add(
+        Container(
+            content=Column([
+                img,
+                name_input,
+                phone_input,
+                age_input,
+                position_input,
+                other_info_input,
+                btn
+            ], spacing=20)
+        )
+    )
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    flet.app(target=test)

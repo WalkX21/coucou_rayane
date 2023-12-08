@@ -1,0 +1,7 @@
+
+
+/* Ajoute une barre de défilement personnalisée */
+.scrollable {
+    max-height: 400px; /* Hauteur maximale de la zone de défilement */
+    overflow-y: auto; /* Active la barre de défilement verticale lorsque le contenu dépasse */
+}

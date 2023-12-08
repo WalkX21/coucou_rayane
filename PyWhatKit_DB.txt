@@ -1,0 +1,35 @@
+Date: 31/8/2023
+Time: 16:59
+Phone Number: +212603170206
+Message: hello
+--------------------
+Date: 31/8/2023
+Time: 17:4
+Phone Number: +212603170206
+Message: hello
+--------------------
+Date: 31/8/2023
+Time: 17:6
+Phone Number: +33615383797
+Message: hello ce message est envoyé par un bot python :)
+--------------------
+Date: 31/8/2023
+Time: 17:7
+Phone Number: +212647475200
+Message: hello ce message est envoyé par un bot python :)
+--------------------
+Date: 1/9/2023
+Time: 11:32
+Phone Number: +212607411411
+Message: salam mon bebou rayane
+--------------------
+Date: 1/9/2023
+Time: 11:34
+Phone Number: +212607411411
+Message: salam mon bebou rayane
+--------------------
+Date: 1/9/2023
+Time: 11:36
+Phone Number: +212607411411
+Message: salam mon bebou rayane
+--------------------
